@@ -1,0 +1,41 @@
+
+.header{
+    height:90px;
+    overflow:hidden;
+    position:relative;
+    z-index:50;
+}
+
+.navbar-custom{
+    background:#00ADEF;
+    color:#fff;
+    padding:10px;
+    margin:0;
+}
+
+.navbar-logo{
+    display:block;
+}
+
+.navbar-logo>h4{
+    color:#fff;
+    float:left;
+    margin:13px 0;
+}
+
+.navbar-logo>img{
+    float:left;
+    display:block;
+    width:64px;
+    margin-right:10px;
+}
+
+.navbar-icons{
+    margin:19.5px 0;
+}
+
+.navbar-icon{
+    display:inline-block;
+    margin-left:20px;
+    cursor:pointer;
+}

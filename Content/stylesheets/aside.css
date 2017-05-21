@@ -1,0 +1,65 @@
+.aside{
+    transition:transform .2s;
+    position:fixed;
+    bottom:0;top:90px;
+    right:-350px;width:350px;
+    background:#333;
+    overflow-y:auto;
+    overflow-x:hidden;
+    z-index:25;
+}
+
+.aside nav{
+    padding:15px 0;
+    font-family:"Nino Mtavruli";
+}
+
+.aside ul{
+    list-style:none;
+}
+
+.aside-menu{
+    font-size:140%;
+    margin:0;
+    padding:0;
+}
+
+.aside-menu-item > a{
+    display:block;
+    padding:15px 20px 8px;
+    color:#fff;
+    text-decoration:none;
+    cursor:pointer;
+    transition:background .2s;
+}
+
+.aside-submenu{
+    display:none;
+    padding:0;
+    margin:0;
+    font-size:90%;
+}
+
+.aside-submenu-item > a{
+    display:block;
+    padding:10px 40px 4px;
+    color:#ccc;
+    transition:background .2s;
+}
+
+.aside-menu-item.has-submenu > a > .fa {
+    transition:transform .2s;
+    vertical-align:top;
+}
+
+.aside-menu-item > a:hover{
+    background:rgba(255,255,255,.1);
+}
+
+.aside-submenu-item > a:hover{
+    background:rgba(255,255,255,.1);
+}
+
+.aside-menu-item.has-submenu.active > a > .fa {
+    transform:rotate(180deg);
+}

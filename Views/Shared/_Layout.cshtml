@@ -1,0 +1,184 @@
+﻿<!doctype html>
+<html lang="ka">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Computer Science Department Site">
+    <meta name="author" content="Students">
+
+    <!-- fb -->
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+
+    <!--twitter-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="~/Content/stylesheets/map.css">
+
+    <title>TSU კომპიუტერული მეცნიერება</title>
+</head>
+<body>
+
+
+    <div style="position:absolute;" id="user-form" class="login-form-wrap">
+        <div class="user-form-bg user-close-toggle"></div>
+        <div class="login-container-table">
+            <div class="login-container-col">
+                <form class="login-form" action="@Url.Action("Login", "User")" method="POST">
+                    <h2>შესვლა</h2>
+                    <div class="form-group has-icon">
+                        <input type="email" name="email" placeholder="ელ. ფოსტა" class="form-control">
+                        <span class="form-icon"><i class="fa fa-user"></i></span>
+                    </div>
+                    <div class="form-group has-icon">
+                        <input type="password" name="pass" placeholder="პაროლი" class="form-control">
+                        <span class="form-icon"><i class="fa fa-lock"></i></span>
+                    </div>
+                    <div class="checkbox clearfix">
+                        <div class="pull-left">
+                            <label>
+                                <input type="checkbox" name="remember"> დამიმახსოვრე
+                            </label>
+                        </div>
+                        <div class="pull-right text-right">
+                            <a href="#">დაგავიწყდა პაროლი?</a>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="pull-left register-btn"><a href="@Url.Action("Registration", "User")"><i class="fa fa-user-plus"></i>&nbsp;რეგისტრაცია</a></div>
+                        <div class="pull-right"><input type="submit" class="btn btn-primary" value="შესვლა"></div>
+                    </div>
+                    <span class="login-close-btn user-close-toggle"><i class="fa fa-close"></i></span>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Header -->
+    <header class="header">
+        <nav class="navbar navbar-custom">
+            <div class="container">
+                <div class="navbar-left">
+                    <a class="navbar-logo clearfix" href="@Url.Action("Index", "Home")">
+                        <img src="~/Content/images/cs-logo.png">
+                        <h4 class="hidden-sm hidden-xs">ივანე ჯავახიშვილის სახელობის<br>თბილისის სახელმწიფო უნივერსიტეტი</h4>
+                    </a>
+                </div>
+
+                <div class="navbar-right navbar-icons">
+
+                    @{
+                        if (Request.IsAuthenticated)
+                        {
+                            using (Html.BeginForm("Logout", "User", FormMethod.Post, new { id = "logoutForm" }))
+                            {
+                            <a style="color:red;" href="javascript:document.getElementById('logoutForm').submit()">ანგარიშიდან გასვლა</a>
+                            }
+                        }
+                        else {
+                                 <div class="navbar-icon user-btn user-btn-toggle">
+                                 <i class="fa fa-user fa-2x"></i>
+                                </div>
+                                <div class="navbar-icon btn-menu-toggle">
+                                    <i class="fa fa-bars fa-2x"></i>
+                                </div>
+                        }
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container body-content">
+        @RenderBody()
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-widgets">
+                        <div class="row">
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <h3 class="widget-title">ჩვენ შესახებ</h3>
+                                <ul>
+                                    <li><a href="#">ისტორია</a></li>
+                                    <li><a href="#">კათედრების სია</a></li>
+                                    <li><a href="#">აკადემიური პერსონალი</a></li>
+                                    <li><a href="#">ლაბორატორიები</a></li>
+                                    <li><a href="#">ინსტიტუტები</a></li>
+                                    <li><a href="#">საერთაშორისო ვიზიტები</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <h3 class="widget-title">სწავლება</h3>
+                                <ul>
+                                    <li><a href="#">საბაკალავრო პროგრამები</a></li>
+                                    <li><a href="#">სამაგისტრო პროგრამები</a></li>
+                                    <li><a href="#">სადოქტორო პროგრამები</a></li>
+                                    <li><a href="#">სასწავლო/საწარმოო პრაქტიკა</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="clear-sm"></div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <h3 class="widget-title">კვლევა</h3>
+                                <ul>
+                                    <li><a href="#">კვლევის მიმართულებები</a></li>
+                                    <li><a href="#">კონფერენციები</a></li>
+                                    <li><a href="#">გრანტები</a></li>
+                                    <li><a href="#">ექსპედიციები</a></li>
+                                    <li><a href="#">დაცული დისერტაციები</a></li>
+                                    <li><a href="#">მიმდინარე მიზნობრივი პროექტები</a></li>
+                                    <li><a href="#">სტუდენტთა სამეცნიერო წრე</a></li>
+                                </ul>
+                            </div>
+
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <h3 class="widget-title">გამოცემები</h3>
+                                <ul>
+                                    <li><a href="#">პერიოდული გამოცემა</a></li>
+                                    <li><a href="#">მონოგრაფიები</a></li>
+                                    <li><a href="#">სახემძღვანელოები</a></li>
+                                    <li><a href="#">პრეპრინტები</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+
+                        <div class="footer-media">
+                            <a href="#" class="f-facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="f-twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="f-google"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="f-youtube"><i class="fa fa fa-youtube-play"></i></a>
+                            <a href="#" class="f-plus"><i class="fa fa-plus"></i></a>
+                        </div>
+
+                        <div class="copyright">
+                            <p>თბილისის სახელმწიფო უნივერსიტეტი &copy; 2016</p>
+                        </div>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+        </section>
+
+        
+         Scripts go here, let the page load faster 
+        <script src="~/Scripts/jquery.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Scripts/fancybox-mousewheel.js"></script>
+        <script src="~/Scripts/fancybox.js"></script>
+        <script src="~/Scripts/scripts.js"></script>
+</body>
+</html>

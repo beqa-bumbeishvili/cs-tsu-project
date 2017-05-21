@@ -1,0 +1,15 @@
+.has-icon {
+    position: relative;
+}
+.has-icon .form-control{
+    padding-left: 30px;
+}
+.form-icon{
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    color: #999;
+}
+.checkbox{
+    margin:0 0 15px;
+}

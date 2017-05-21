@@ -1,0 +1,31 @@
+/*for body*/
+.overflowed{
+    overflow:hidden;
+}
+
+/*every block inside of this*/
+.main-section{
+    transition:transform .2s;
+    position:relative;
+}
+
+.rails-girls{
+    transform:translateX(-350px);
+}
+
+.main-section>.cover{
+    display:block;
+    position:absolute;
+    top:0;bottom:0;
+    left:0;right:0;
+    background:rgba(0,0,0,.6);
+    z-index:24;
+    transform:scaleX(0);
+    transform-origin:right;
+    transition:transform .2s;
+}
+
+.main-section.rails-girls > .cover{
+    transform:scaleX(1);
+}
+/*SLIDE EFFECTS AND SHIT END*/

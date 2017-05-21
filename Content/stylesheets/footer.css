@@ -1,0 +1,63 @@
+
+/*footer*/
+.footer {
+    background:#333;
+    color: #fff;
+}
+
+.footer a {
+    color: #fff;
+    font-family: "Nino Mtavruli";
+    transition:color .2s;
+}
+
+.footer a:hover {
+    color: #aaa;
+}
+
+.footer-widgets {
+    padding-top: 55px;
+    padding-bottom: 40px;
+}
+
+.widget-title {
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-align:left;
+    margin-bottom: 10px;
+}
+
+.footer-widgets ul li {
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    border-top: 1px solid #4A4A4A;
+}
+
+.footer-media {
+    margin-bottom: 15px;
+}
+
+.footer-media a {
+    background-color:#ffffff;
+    color:#333333;
+    display:inline-block;
+    text-align:center;
+    line-height:40px;
+    width:40px;height:40px;
+    border-radius:100%;
+    cursor:pointer;
+    margin-right:5px;
+    transition:color .2s;
+}
+
+.footer-media a.f-facebook:hover{color:#3B5998;}
+.footer-media a.f-twitter:hover{color:#00aced;}
+.footer-media a.f-google:hover{color:#d34836;}
+.footer-media a.f-youtube:hover{color:#d34836;}
+.footer-media a.f-plus:hover{color:#00ADEF;}

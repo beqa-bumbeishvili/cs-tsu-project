@@ -1,0 +1,11 @@
+﻿<h2>გამარჯობა @Session["Username"], თქვენ წარმატებით დალოგინდით სისტემაში</h2>
+
+<a href="@Url.Action("Index","Home")">მთავარი</a>
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("Logout", "User", FormMethod.Post, new { id = "logoutForm" }))
+    {
+        <a href="javascript:document.getElementById('logoutForm').submit()">ანგარიშიდან გასვლა</a>
+    }
+}
+

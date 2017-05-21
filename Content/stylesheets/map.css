@@ -1,0 +1,93 @@
+@import "bootstrap.css";
+@import "font-awesome.min.css";
+
+@import "reset.css";
+@import "fonts.css";
+@import "bootstrap-custom.css";
+
+@import "shared.css";
+@import "login-popup.css";
+@import "navbar.css";
+@import "aside.css";
+@import "slide-animation.css";
+@import "forms.css";
+
+@import "lecturer.css";
+@import "news.css";
+@import "footer.css";
+
+@import "media.css";
+
+/*Fancybox Reset Retting */
+#fancybox-wrap,
+#fancybox-wrap * {
+    box-sizing: content-box;
+}
+
+/*  4.6 Gallery Post */
+
+.gallery-count {
+    float: left;
+    color: #aaaaaa;
+}
+
+.gallery-items {
+    position: relative;
+    display: block;
+    float: left;
+    width: 279px;
+    height: 220px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+.gallery-items:nth-child(2n) {
+    margin-right: 0px;
+}
+
+.gallery-items:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    text-decoration: inherit;
+    position: absolute;
+    z-index: 130;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: #fff;
+    -webkit-transition: all 200ms ease-in-out 0s;
+    -moz-transition: all 200ms ease-in-out 0s;
+    -o-transition: all 200ms ease-in-out 0s;
+    transition: all 200ms ease-in-out 0s;
+}
+
+.gallery-items:after {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba( 1, 1, 1, 0.1 );
+    -webkit-transition: all 200ms ease-in-out 0s;
+    -moz-transition: all 200ms ease-in-out 0s;
+    -o-transition: all 200ms ease-in-out 0s;
+    transition: all 200ms ease-in-out 0s;
+}
+
+.gallery-items:hover:before,
+.gallery-items:hover:after {
+    opacity: 1;
+}

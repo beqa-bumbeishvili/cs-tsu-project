@@ -1,0 +1,29 @@
+/*lecturer*/
+.lecturer-inf {
+    margin-bottom: 10px;
+}
+
+.lecturer-avatar {
+    width: 200px;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+.lecturer-profession,
+.lecturer-name {
+    text-align: center;
+    margin: 0 0 10px;
+}
+
+.lecturer-name {
+    color: #00ADEF;
+    padding: 5px 0 0;
+}
+
+.lecturer-list {
+    list-style: none;
+}
+
+.lecturer-list li {
+    margin-bottom: 5px;
+}
