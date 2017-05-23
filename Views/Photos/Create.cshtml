@@ -1,0 +1,21 @@
+﻿@model ComputerScienceTsu.Models.Generated.Photo
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create", "Photos", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <h3>Upload image</h3>
+    <input type="file" name="file" value="Browse" />
+    <br />
+    <input type="submit" value="Upload" />
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

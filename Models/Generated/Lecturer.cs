@@ -17,6 +17,12 @@ namespace ComputerScienceTsu.Models.Generated
 
         public int ID { get; set; }
 
+        [StringLength(50)]
+        public string Name { get; set; }
+
+        [StringLength(50)]
+        public string Lastname { get; set; }
+
         [StringLength(30)]
         public string Phone { get; set; }
 

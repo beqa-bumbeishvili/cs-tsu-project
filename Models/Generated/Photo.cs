@@ -16,7 +16,7 @@ namespace ComputerScienceTsu.Models.Generated
 
         public int ID { get; set; }
 
-        [StringLength(100)]
+        [StringLength(500)]
         public string Image_path { get; set; }
 
         public DateTime? Created_at { get; set; }
