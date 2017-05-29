@@ -95,6 +95,51 @@
             </div>
         </nav>
     </header>
+
+    <aside id="aside" class="aside">
+        <nav>
+            <ul class="aside-menu">
+                <li class="aside-menu-item"><a href="#">მთავარი</a></li>
+                <li class="aside-menu-item"><a href="@Url.Action("Index","News")">სიახლეები</a></li>
+                <li class="aside-menu-item has-submenu">
+                    <a>ჩვენ შესახებ&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
+                    <ul class="aside-submenu">
+                        <li class="aside-submenu-item"><a href="#">ისტორია</a></li>
+                        <li class="aside-submenu-item"><a href="#">კათედრების სია</a></li>
+                        <li class="aside-submenu-item"><a href="#">აკადემიური პერსონალი</a></li>
+                        <li class="aside-submenu-item"><a href="#">ლაბორატორიები</a></li>
+                        <li class="aside-submenu-item"><a href="#">ინსტიტუტები</a></li>
+                        <li class="aside-submenu-item"><a href="#">საერთაშორისო ვიზიტები</a></li>
+                    </ul>
+                </li>
+                <li class="aside-menu-item has-submenu">
+                    <a>სწავლება&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
+                    <ul class="aside-submenu">
+                        <li class="aside-submenu-item"><a href="#">საბაკალავრო პროგრამები</a></li>
+                        <li class="aside-submenu-item"><a href="#">სამაგისტრო პროგრამები</a></li>
+                        <li class="aside-submenu-item"><a href="#">სადოქტორო პროგრამები</a></li>
+                        <li class="aside-submenu-item"><a href="#">სასწავლო/საწარმოო პრაქტიკა</a></li>
+                    </ul>
+                </li>
+                <li class="aside-menu-item has-submenu">
+                    <a>კვლევა&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
+                    <ul class="aside-submenu">
+                        <li class="aside-submenu-item"><a href="#">კვლევის მიმართულებები</a></li>
+                        <li class="aside-submenu-item"><a href="#">კონფერენციები</a></li>
+                        <li class="aside-submenu-item"><a href="#">გრანტები</a></li>
+                        <li class="aside-submenu-item"><a href="#">ექსპედიციები</a></li>
+                        <li class="aside-submenu-item"><a href="#">დაცული დისერტაციები</a></li>
+                        <li class="aside-submenu-item"><a href="#">მიმდინარე მიზნობრივი პროექტები</a></li>
+                        <li class="aside-submenu-item"><a href="#">სტუდენტთა სამეცნიერო წრე</a></li>
+                    </ul>
+                </li>
+                <li class="aside-menu-item"><a href="gallery.html">ფოტოგალერეა</a></li>
+                <li class="aside-menu-item"><a href="#">კონტაქტი</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+
     <div class="container body-content">
         @RenderBody()
 

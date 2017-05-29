@@ -23,6 +23,9 @@ namespace ComputerScienceTsu.Models.Generated
 
         public DateTime? Updated_at { get; set; }
 
+        [StringLength(500)]
+        public string Image_path { get; set; }
+
         public virtual User User { get; set; }
     }
 }
