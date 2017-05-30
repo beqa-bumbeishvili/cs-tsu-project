@@ -39,7 +39,7 @@ namespace ComputerScienceTsu.Controllers
         // GET: Publications/Create
         public ActionResult Create()
         {
-            ViewBag.Lecturer_id = new SelectList(db.Lecturers, "ID", "Phone");
+            ViewBag.Lecturer_id = new SelectList(db.Lecturers, "ID", "Lastname");
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace ComputerScienceTsu.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.Lecturer_id = new SelectList(db.Lecturers, "ID", "Phone", publication.Lecturer_id);
+            ViewBag.Lecturer_id = new SelectList(db.Lecturers, "ID", "Name", publication.Lecturer_id);
             return View(publication);
         }
 
@@ -73,7 +73,7 @@ namespace ComputerScienceTsu.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.Lecturer_id = new SelectList(db.Lecturers, "ID", "Phone", publication.Lecturer_id);
+            ViewBag.Lecturer_id = new SelectList(db.Lecturers, "ID", "Name", publication.Lecturer_id);
             return View(publication);
         }
 
@@ -90,7 +90,7 @@ namespace ComputerScienceTsu.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.Lecturer_id = new SelectList(db.Lecturers, "ID", "Phone", publication.Lecturer_id);
+            ViewBag.Lecturer_id = new SelectList(db.Lecturers, "ID", "Name", publication.Lecturer_id);
             return View(publication);
         }
 

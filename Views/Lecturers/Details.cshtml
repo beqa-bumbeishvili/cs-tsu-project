@@ -81,10 +81,15 @@
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active" id="home">
                                     <div class="tab-content">
-                                        პანდა ბინადრობს ცენტრალური ჩინეთის სამხრეთით მთებში მდებარე ცივ, ნესტიან ტყეებში (აღმოსავლეთი ტიბეტი, სიჩუანი, იუნანი), 1200-4000 მეტრის სიმაღლეზე. სწორედ აქ იზრდება მისი საყვარელი საკვები ბამბუკი. ბამბუკის ტყეები აქ 30000 კვ. კმ.-ზეა გადაჭიმული, მაგრამ ვარაუდობენ, რომ პანდებს დაკავებული აქვთ მხოლოდ 6000 კვ. კმ. პანდები იშვიათად ცხოვრობენ ოჯახებში, ისინი თავს არიდებენ ერთმანეთს და მარტოობას ამჯობინებენ. გიგანტური პანდა აქტივობას ღამით გამოხატავს. მთელ დღეს ისინი ძილში ატარებენ. ამისათვის პანდა ადგილს ირჩევს ან კლდის მიყრუებულ ადგილას, ან ხის ფუღუროში. შებინდებისას იგი იღვიძებს და გათენებამდე აქტიურია.
                                     </div>
                                 </div>
-                                <div role="tabpanel" class="tab-pane" id="profile">...</div>
+                                <div role="tabpanel" class="tab-pane" id="profile">
+                                    @foreach (var item in Model.Publications)
+                                    {
+                                        <p style="margin-left:2%;"><a href="/Publications/Details/@item.ID">@item.Title</a></p>
+                                    }
+
+                                </div>
                                 <div role="tabpanel" class="tab-pane" id="messages">@Html.DisplayFor(model => model.Additional_info)</div>
                                 <div role="tabpanel" class="tab-pane" id="settings">@Html.DisplayFor(model => model.About)</div>
                             </div>

@@ -55,9 +55,9 @@
                                 <a href="#"><img src="@Html.DisplayFor(modelItem => item.Image_path)"></a>
                             </div> 
 
-                            <h3 class="itm-title"><a href="#">@Html.DisplayFor(modelItem => item.Title)</a></h3>
+                            <h3 class="itm-title"><a href="News/Details/@Html.DisplayFor(modelItem => item.ID)">@Html.DisplayFor(modelItem => item.Title)</a></h3>
                             <div class="itm-paragraph">
-                                <p>@Html.DisplayFor(modelItem => item.Content)</p>
+                                <p>@item.Content.Substring(0,@item.Content.IndexOf(".")+1)</p>
                             </div>
                             <div class="itm-details">
                                 <span><i class="fa fa-clock-o"></i>&nbsp;3 დღის წინ</span>
@@ -68,20 +68,8 @@
 
                         }
 
-                        <nav id="pagination" class="pagination-nav">
-                            <ul class="pagination">
-                                <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-                                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-                            </ul>
-                        </nav>
-
-
-
+                        
+                       <h4><a href="@Url.Action("Create", "News")" target="_blank">სიახლის დამატება</a></h4>
                     </div>
                 </div>
 

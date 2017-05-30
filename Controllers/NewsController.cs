@@ -53,7 +53,8 @@ namespace ComputerScienceTsu.Controllers
             string alternativePath = @"/Content/images/" + file.FileName;
             file.SaveAs(Path.Combine(Server.MapPath("~/Content/images"), file.FileName));
             var news = NewsService.SetNews(Title, Content, Created_by, alternativePath);
-
+            news.Created_at = DateTime.Now;
+            news.Updated_at = DateTime.Now;
             if (ModelState.IsValid)
             {
                 db.News.Add(news);
