@@ -51,7 +51,7 @@
                         <div class="box-white">
                             <h3 class="some-heading">რეგისტრაცია</h3>
 
-                            <form action="@Url.Action("Registration", "User")" method="post" onSubmit="return formValidation();">
+                            <form action="@Url.Action("Registration", "User")" method="post" name="registrationForm" onSubmit="return formValidation();">
                                 <div class="form-group">
                                     <label for="exampleInputName">სახელი და გვარი</label>
                                     <div class="row">
@@ -108,7 +108,7 @@
                                 </div>
 
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary">რეგისტრაცია</button>
+                                    <button type="submit" onclick="validations(document.registrationForm)" class="btn btn-primary">რეგისტრაცია</button>
                                 </div>
                             </form>
 
@@ -158,3 +158,4 @@
 
         </div>
     </section>
+    <script src="~/Scripts/form-validations.js"></script>
