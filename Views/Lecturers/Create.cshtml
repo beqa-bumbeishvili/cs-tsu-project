@@ -17,7 +17,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", placeholder = "სახელი" } })
                 @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -25,7 +25,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Lastname, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Lastname, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Lastname, new { htmlAttributes = new { @class = "form-control", placeholder = "გვარი" } })
                 @Html.ValidationMessageFor(model => model.Lastname, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -33,7 +33,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", placeholder = "ტელეფონი" } })
                 @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -41,7 +41,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "მეილი" } })
                 @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -49,21 +49,29 @@
     <div class="form-group">
         @Html.LabelFor(model => model.About, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.About, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.About, new { htmlAttributes = new { @class = "form-control", placeholder = "ლექტორის შესახებ" } })
             @Html.ValidationMessageFor(model => model.About, "", new { @class = "text-danger" })
         </div>
     </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Additional_info, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Additional_info, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Additional_info, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Additional_info, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Additional_info, new { htmlAttributes = new { @class = "form-control", placeholder = "დამატებითი ინფორმაცია" } })
+                @Html.ValidationMessageFor(model => model.Additional_info, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
+
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.Additional_info, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Cathedra_ID, new List<> { product } )
+                @Html.ValidationMessageFor(model => model.Additional_info, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
 
     <div class="form-group">
-        @Html.LabelFor(model => model.Photo_id, "Photo", htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.Photo_id, "Photo", htmlAttributes: new { @class = "control-label col-md-2", placeholder = "სურათი" })
         <div class="col-md-10">
             <input type="file" name="file" value="Browse" class="form-control"/>
         </div>

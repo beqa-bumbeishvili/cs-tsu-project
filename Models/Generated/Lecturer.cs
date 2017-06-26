@@ -37,11 +37,15 @@ namespace ComputerScienceTsu.Models.Generated
 
         public int? Photo_id { get; set; }
 
+        public int? Cathedra_ID { get; set; }
+
         [Required]
         [StringLength(2500)]
         public string Full_address { get; set; }
 
         public virtual Photo Photo { get; set; }
+    
+        public virtual CS_Departments CS_Departments { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Publication> Publications { get; set; }
