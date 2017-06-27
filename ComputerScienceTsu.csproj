@@ -130,6 +130,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CS_DepartmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\PhotosController.cs" />
@@ -274,6 +275,11 @@
     <Content Include="Views\Publications\Details.cshtml" />
     <Content Include="Views\Publications\Edit.cshtml" />
     <Content Include="Views\Publications\Index.cshtml" />
+    <Content Include="Views\CS_Departments\Create.cshtml" />
+    <Content Include="Views\CS_Departments\Delete.cshtml" />
+    <Content Include="Views\CS_Departments\Details.cshtml" />
+    <Content Include="Views\CS_Departments\Edit.cshtml" />
+    <Content Include="Views\CS_Departments\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
